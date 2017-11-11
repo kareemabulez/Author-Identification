@@ -99,4 +99,6 @@ There are 100 tests in `test.csv`, my test solution appears to be pretty good at
 ## Tips
 - Copy a few lines from `train.csv` into a new file (or just write a couple lines from scratch) and do your testing on that. Make sure your frequencies are correct and your hashtable is working. 
 - If you use the ArrayList solution mentioned about - feel free to use any methods in that class that might help you out (perhaps `size()`). 
+- while you might not use the remove method from your hashTable the grader may do that when grading your assignment. You may like to remove a few common words from your hash tables and see if it improves (or decreases) performance. (eg. remove `the`, `and` and `a`) and see if that helps or hurts your guesses.
+
 
