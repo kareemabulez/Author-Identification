@@ -83,6 +83,8 @@ MapEntryList [] hashTable = new MapEntryList[9973];
 hashTable[0].getList(); //gives access to the underlying arraylist in hash table buckey 0
 ```
 
+This a valid solution that allows you to take advantage of java's arraylist to help with your separate chaining. You may also create an array of Node's (where Node implements your own linked list). Which ever solution you like for separate chaining is accepatable.
+
 ## Process
 - Create 3 FrequencyHashTables, one for each author
 - Scan all the lines of `train.csv` and create a Record for each line.
@@ -93,4 +95,8 @@ hashTable[0].getList(); //gives access to the underlying arraylist in hash table
 - Compare against the actual author (Record:getAuthor) and count your correct guesses.
 
 There are 100 tests in `test.csv`, my test solution appears to be pretty good at guessing authors with around 87 / 100 correct guesses.
+
+## Tips
+- Copy a few lines from `train.csv` into a new file (or just write a couple lines from scratch) and do your testing on that. Make sure your frequencies are correct and your hashtable is working. 
+- If you use the ArrayList solution mentioned about - feel free to use any methods in that class that might help you out (perhaps `size()`). 
 
