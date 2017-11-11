@@ -9,7 +9,7 @@ General overview of how this will work:
 - Now given a new sentence see how frequently the words in that sentence are used by those authors
 - Use the product of those frequencies to guess which author wrote that sentence (largest product wins)
 
-You will implement a version of a hash table in a class called FrequencyHashTable it will have room for a fixed `9973` buckets - your hash table will use separate chaining as a collision resolution scheme. Your hash table will store the word as a key and the count of how many times that word has been seen as the value. You can use Java's built in hashCode() method for Strings (adjusted for your HashTable size - noting that the hashCode might return a negative so you should convert it to positive values), and it will store a count of how many times it has seen that String. However, when you go to retrieve a value for a certain key you should return that key's frequency: (its count / sum of all counts). i.e., the frequency that word occurs in the text as a whole (for that author). Note you should store the total count somewhere rather than computing it constantly.
+You will implement a version of a hash table in a class called `FrequencyHashTable` it will have room for a fixed `9973` buckets - your hash table will use separate chaining as a collision resolution scheme. Your hash table will store the word as a key and the count of how many times that word has been seen as the value. You can use Java's built in `hashCode()` method for Strings (adjusted for your HashTable size - noting that the hashCode might return a negative so you should convert it to positive values), and it will store a count of how many times it has seen that String. However, when you go to retrieve a value for a certain key you should return that key's frequency: (its count / sum of all counts). i.e., the frequency that word occurs in the text as a whole (for that author). Note you should store the total count somewhere rather than computing it constantly.
 
 Your hash table should have the following methods:
 
@@ -17,10 +17,10 @@ Your hash table should have the following methods:
 FrequencyHashTable() //create a frequency hash table with fixed size 9973
 void increment (K, V) //increment the current count for this key or insert key with count 1 if it is a new key
 void remove (K) //remove a given word from the table
-double get(K)//return the frequency (count / totalCount()) for a given Key
+double get(K)//return the frequency (count / (double) totalCount()) for a given Key
 boolean isEmpty()//are there any keys in the table?
-boolean size()//how many keys are in the table
-boolean totalCount()//total sum of all the counts
+int size()//how many keys are in the table
+int totalCount()//total sum of all the counts
 ```
 
 You'll start by looking at a CSV (comma separated values) file.
