@@ -29,7 +29,14 @@ public class FrequencyHashTable {
         }
     }
 
-    public void remove(String key){ }
+    public void remove(String key){ int removeHash = getHashCode(key);
+        List<MapEntry<String, Integer>> meList = hashTable[removeHash].getList();
+
+        int position = -1;
+        for(int i = 0; i < meList.size(); i++) {
+            if (meList.get(i).getK().equals(key)) { position = i; break; }
+        }
+        if(position == -1){ hashTable[removeHash].getList().remove(new MapEntry<>(key, 1));}}
 
     public double get(String key){
         int stringHash = getHashCode(key);
