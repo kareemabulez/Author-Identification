@@ -21,7 +21,7 @@ void increment (K, V) //increment the current count for this key or insert key w
 void remove (K) //remove a given word from the table
 double get(K)//return the frequency (count / (double) totalCount()) for a given Key
 boolean isEmpty()//are there any keys in the table?
-int size()//how many keys are in the table
+int size()//how many keys are in the /
 int totalCount()//total sum of all the counts
 ```
 
